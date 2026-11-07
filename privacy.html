@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — Shorts Agent</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>Privacy Policy</h1>
+      <p>Shorts Agent · last updated November 7, 2026</p>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>1. Who we are</h2>
+      <p>
+        Shorts Agent (“the tool”) is a private desktop application operated by {{NAME}}
+        (<a href="mailto:{{EMAIL}}">{{EMAIL}}</a>), the owner of the YouTube channel “GTA VI Streams”.
+        The tool is used only by its operator and only for that channel.
+      </p>
+    </section>
+
+    <section>
+      <h2>2. Use of YouTube API Services</h2>
+      <p>
+        Shorts Agent uses <strong>YouTube API Services</strong>. By using the tool you are also bound by the
+        <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>, and Google’s handling of data is described in the
+        <a href="https://policies.google.com/privacy">Google Privacy Policy</a> (http://www.google.com/policies/privacy).
+      </p>
+    </section>
+
+    <section>
+      <h2>3. What data the tool accesses</h2>
+      <p>After the channel owner signs in with Google (OAuth 2.0) and grants permission, the tool accesses only the owner’s own channel:</p>
+      <ul>
+        <li>channel ID and title, the list of the channel’s uploads and live broadcasts and their status;</li>
+        <li>metadata of the owner’s own videos (title, description, duration, processing status);</li>
+        <li>the owner’s own stream recordings, to cut highlight clips and choose a thumbnail frame;</li>
+        <li>the owner’s own playlists, to add episodes to a series playlist.</li>
+      </ul>
+      <p>The tool does <strong>not</strong> access other users’ data, comments, subscribers’ personal information, analytics, or any data from channels the operator does not own.</p>
+    </section>
+
+    <section>
+      <h2>4. How the data is used</h2>
+      <ul>
+        <li>to detect when a stream has ended and which recording to process;</li>
+        <li>to create and upload YouTube Shorts made from the owner’s own streams;</li>
+        <li>to update the title, description (including chapters), tags and thumbnail of the owner’s own recordings;</li>
+        <li>to add those recordings to a playlist on the owner’s channel.</li>
+      </ul>
+      <p>
+        To pick the best moments and write titles, short preview clips or still frames of the owner’s own streams
+        may be sent to the Google Gemini API for analysis. No YouTube account credentials, OAuth tokens or
+        data about other people are sent there.
+      </p>
+    </section>
+
+    <section>
+      <h2>5. Storage and retention</h2>
+      <ul>
+        <li>The OAuth token and all working files are stored <strong>locally on the operator’s computer</strong> only. There is no server or cloud database.</li>
+        <li>The tool keeps a local processing log with the IDs and titles of the owner’s own videos. Data obtained from YouTube API Services is refreshed or deleted within <strong>30 days</strong>, as required by the YouTube API Services Developer Policies.</li>
+        <li>Temporary video files are deleted automatically after processing.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>6. Sharing</h2>
+      <p>No data is sold, rented or shared with third parties, except the analysis requests to Google Gemini described in section 4.</p>
+    </section>
+
+    <section>
+      <h2>7. Cookies</h2>
+      <p>This website and the tool do not use cookies or tracking. The site is hosted on GitHub Pages; see GitHub’s privacy statement for server logs.</p>
+    </section>
+
+    <section>
+      <h2>8. Revoking access and deleting data</h2>
+      <ul>
+        <li>Access granted to the tool can be revoked at any time on the Google security settings page:
+          <a href="https://security.google.com/settings/security/permissions">https://security.google.com/settings/security/permissions</a>.</li>
+        <li>After revocation the tool can no longer access the channel. To request deletion of any locally stored data, contact
+          <a href="mailto:{{EMAIL}}">{{EMAIL}}</a>; it will be deleted within 7 days.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>9. Changes and contact</h2>
+      <p>This policy may be updated; the date at the top shows the latest version. Questions: <a href="mailto:{{EMAIL}}">{{EMAIL}}</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 {{NAME}}</span>
+      <a href="index.html">Home</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>
+      <a href="https://policies.google.com/privacy">Google Privacy Policy</a>
+    </div>
+  </footer>
+</body>
+</html>
