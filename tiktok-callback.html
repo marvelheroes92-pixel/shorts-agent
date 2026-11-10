@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shorts Agent — TikTok sign-in</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><div class="wrap"><h1>Shorts Agent</h1><p>TikTok sign-in</p></div></header>
+  <main>
+    <section>
+      <h2 id="h">Finishing sign-in…</h2>
+      <p id="msg">Returning to Shorts Agent on this computer.</p>
+      <p><code id="code" style="word-break:break-all"></code></p>
+    </section>
+  </main>
+  <script>
+    // TikTok returns ?code=…&state=… here. The page hands them to the tool running on this computer
+    // (http://127.0.0.1:8765). Nothing is sent to any server; the code is useless without the app secret.
+    const q = new URLSearchParams(location.search);
+    const code = q.get("code"), state = q.get("state"), err = q.get("error");
+    const h = document.getElementById("h"), msg = document.getElementById("msg");
+    if (err) {
+      h.textContent = "Sign-in was cancelled";
+      msg.textContent = (q.get("error_description") || err);
+    } else if (code) {
+      const local = "http://127.0.0.1:8765/tiktok?code=" + encodeURIComponent(code) + "&state=" + encodeURIComponent(state || "");
+      msg.textContent = "If nothing happens, copy this code into the terminal:";
+      document.getElementById("code").textContent = code;
+      setTimeout(() => { location.href = local; }, 800);   // если не откроется — «Назад» вернёт к коду
+    } else {
+      h.textContent = "Nothing to do here";
+      msg.textContent = "This page is used only during TikTok sign-in.";
+    }
+  </script>
+</body>
+</html>
